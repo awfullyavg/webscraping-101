@@ -11,14 +11,19 @@ driver = webdriver.Chrome(options=options)
 # options.add_argument("--headless")  # Optional: Run Chrome in headless mode
 
 driver.get("https://toscrape.com.usitestat.com/")
+
+# Uncomment code below to run a simple test for Selenium
+####################### 
 # title_element = driver.title
 # print(driver.title)
+#######################
 
-search = driver.find_element("name", "q")
-search.send_keys("test")
-search.send_keys(Keys.RETURN)
+search = driver.find_element("name", "q") #Finds the searchbar by name
+search.send_keys("test") #Tells Selenium to input "test"
+search.send_keys(Keys.RETURN) #Tells Selenium to hit 'ENTER'
 
-
+#Sometimes the page loads slower than the pace Selenium is scrapping. This will result in a 'element not found' error most times. 
+#We use WebDriverWait() to tell selenium to wait x amount of seconds until excepcted conditions are present.
 try:
     listings = WebDriverWait(driver, 20).until(
         EC.presence_of_element_located((By.CLASS_NAME, "content_wrapper"))
