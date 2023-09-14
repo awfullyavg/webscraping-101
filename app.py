@@ -23,6 +23,7 @@ search = driver.find_element("name", "q") #Finds the searchbar by name
 search.send_keys("test") #Tells Selenium to input "test"
 search.send_keys(Keys.RETURN) #Tells Selenium to hit 'ENTER'
 
+
 #Sometimes the page loads slower than the pace Selenium is scrapping. This will result in a 'element not found' error most times. 
 #We use WebDriverWait() to tell selenium to wait x amount of seconds until excepcted conditions are present.
 try:
@@ -39,9 +40,21 @@ try:
 finally:
     driver.quit()
 
+#Code below demos simple navigation by finding a hyperlink named "Quia" & clicking it
+# try:
+#     link = WebDriverWait(driver, 10).until(
+#          EC.presence_of_element_located((By.LINK_TEXT, "Quia"))
+#     )
+#     link.click()
+#     print(driver.page_source)
+    
+# except:
+#      driver.quit()
+
+
 # print(listings.text)
 # print(driver.page_source)
-time.sleep(5)
 
+time.sleep(5)
 driver.quit()
 

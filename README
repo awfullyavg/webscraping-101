@@ -5,7 +5,8 @@ In order to see the web scrapper actually perform teh programmed tasks, you need
 
 - [How to install Selenium in WSL](https://stackoverflow.com/questions/63290844/how-to-run-selenium-chromedriver-from-python3-on-wsl2?newreg=d040c37cdde449899783cddf34b00e32)
     - Resource: https://www.gregbrisebois.com/posts/chromedriver-in-wsl2/
-    - Make sure that in your .bashrc folder you have `export DISPLAY=<your windows ip address>:0.0`
+    - Make sure that in your .bashrc folder you have `export DISPLAY=<your WSL ip address>:0.0`
+        - Change WSL address to Windows address if you wish to not use Vcxsrv
     - In wsl run `sudo apt-get install x11-apps`
     - Run xclock in wsl to test if the Xserver is connected
     - Helpful Video: https://www.youtube.com/watch?v=4SZXbl9KVsw&t=166s
