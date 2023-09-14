@@ -20,7 +20,7 @@ lang_menu = driver.find_element(By.ID, "promptContentChangeLanguage")
 lang_eng = lang_menu.find_element(By.ID, "langSelect-EN")
 lang_eng.click()
 
-driver.implicitly_wait(8)
+driver.implicitly_wait(5)
 
 for i in range(100):
     cookie = driver.find_element(By.ID, "bigCookie")
@@ -30,11 +30,20 @@ for i in range(100):
     #Actions chains are like a queue of actions to perform
     actions = ActionChains(driver)
     actions.click(cookie)
-
     actions.perform() #Need perform to execute 
+
+    count = int(cookie_count.text.split(" ")[0])
+    
+    for item in items:
+        value = int(item.text)
+        if value <= count:
+            upgrade_actions = ActionChains(driver)
+            upgrade_actions.move_to_element(item)
+            upgrade_actions.click()
+            upgrade_actions.perform()
     
     # Print the number of cookies and other relevant information
-    print(f"Cookies: {cookie_count.text}, Items: {[item.text for item in items]}")
+    # print(f"Cookies: {cookie_count.text}, Items: {[item.text for item in items]}")
 
 time.sleep(5)
 driver.quit()
