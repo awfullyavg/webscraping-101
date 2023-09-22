@@ -1,8 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 
-#Ref: https://realpython.com/beautiful-soup-web-scraper-python/
-
 URL = 'https://realpython.github.io/fake-jobs/'
 page = requests.get(URL)
 
@@ -28,7 +26,6 @@ for job_element in job_elements:
     print(company_element.text.strip())
     print(location_element.text.strip())
     print()
-
 
 for job_element in python_job_elements:
     title_element = job_element.find("h2", class_="title")
