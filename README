@@ -1,7 +1,7 @@
 To install Selenium please follow the guide below. The subsidary points are there to help when it comes to troubleshooting. 
 NOTE: Everybody's environemnt is different. This was programmed in a WSL environment using Google Chromes chromedriver(https://chromedriver.chromium.org/downloads).
 
-In order to see the web scrapper actually perform teh programmed tasks, you need to install Vcxsrv (https://sourceforge.net/projects/vcxsrv/)
+In order to see the web scrapper actually perform the programmed tasks, you need to install Vcxsrv (https://sourceforge.net/projects/vcxsrv/)
 
 - [How to install Selenium in WSL](https://stackoverflow.com/questions/63290844/how-to-run-selenium-chromedriver-from-python3-on-wsl2?newreg=d040c37cdde449899783cddf34b00e32)
     - Resource: https://www.gregbrisebois.com/posts/chromedriver-in-wsl2/

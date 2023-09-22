@@ -4,11 +4,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-from bs4 import BeautifulSoup
 import time
 import smtpd
 
-soup = BeautifulSoup
+#This is simple safe automation built to exercise some of the 'bot' functionality that selenium has! I used this website in particular becasue its was safe to test a webscrapper on.
+#PLEASE know that many websites dont like webscrappers and prohibit this type of activity so be aware of where you scrape.
+#HAPPY SCRAPPING :)
+
 options = webdriver.ChromeOptions() 
 options.binary_location = "/usr/bin/google-chrome" #Need to point to location of chromedriver in WSL
 driver = webdriver.Chrome(options=options)
@@ -46,8 +48,6 @@ for i in range(100):
     
     # Print the number of cookies and other relevant information
     # print(f"Cookies: {cookie_count.text}, Items: {[item.text for item in items]}")
-
-    
 
 time.sleep(5)
 driver.quit()
