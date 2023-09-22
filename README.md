@@ -3,7 +3,7 @@ This is for tutorial purposes only. I do not condone/encourage unethical web scr
 ### Please scrape ethically
 
 # Intro:
-This project demos various webscrapping methods. Meant to help those interested in the topic easily follow along. 
+This project demos various webscrapping methods. Meant to help those interested in the topic & to easily follow along. 
 
 # File Descriptions
 - **app**:  Shows basic Selenium functionality.
