@@ -9,8 +9,11 @@ import smtpd
 options = webdriver.ChromeOptions() 
 options.binary_location = "/usr/bin/google-chrome" #Need to point to location of chromedriver in WSL
 driver = webdriver.Chrome(options=options)
-# options.add_argument("--headless")  # Optional: Run Chrome in headless mode
 
+# Optional: Run Chrome in headless mode
+# options.add_argument("--headless")
+
+#Add a website that you wish to scrape
 driver.get("https://toscrape.com.usitestat.com/")
 
 # Uncomment code below to run a simple test for Selenium
@@ -19,13 +22,13 @@ driver.get("https://toscrape.com.usitestat.com/")
 # print(driver.title)
 #######################
 
-search = driver.find_element("name", "q") #Finds the searchbar by name
-search.send_keys("test") #Tells Selenium to input "test"
+search = driver.find_element("name", "q") #Finds the search bar by name
+search.send_keys("test") #Tells Selenium to input "test" into the search bar
 search.send_keys(Keys.RETURN) #Tells Selenium to hit 'ENTER'
-
 
 #Sometimes the page loads slower than the pace Selenium is scrapping. This will result in a 'element not found' error most times. 
 #We use WebDriverWait() to tell selenium to wait x amount of seconds until excepcted conditions are present.
+#In addition we use a try & finally in order to control the execution of the code within the try block. If there is any errors it will default to the finally block which is to quit the browser. 
 try:
     listings = WebDriverWait(driver, 20).until(
         EC.presence_of_element_located((By.CLASS_NAME, "content_wrapper"))
@@ -47,7 +50,7 @@ finally:
 #     )
 #     link.click()
 #     print(driver.page_source)
-    
+  
 # except:
 #      driver.quit()
 
