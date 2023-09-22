@@ -17,7 +17,8 @@ Everybody's environemnt is different. This was programmed in a **WSL environment
 1. [How to install Selenium in WSL](https://stackoverflow.com/questions/63290844/how-to-run-selenium-chromedriver-from-python3-on-wsl2?newreg=d040c37cdde449899783cddf34b00e32).
     - Resource for [troubleshooting](https://www.gregbrisebois.com/posts/chromedriver-in-wsl2/)
     ## Major Key Alert:
-    - Make sure that in your .bashrc file you have `export DISPLAY=<your WSL ip address>:0.0` at the end of the file. **Dont want to use WSL?** Change WSL address to Windows address if you wish to not use Vcxsrv.
+    - Make sure that in your **.bashrc** file you have `export DISPLAY=<your WSL ip address>:0.0` at the end of the file. 
+    - **Dont want to use WSL?** Change WSL address to Windows address if you wish to not use Vcxsrv.
     - This has worked for me as well too, replacing the code above: `export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0`.
 
 2. When you run `echo $DISPLAY` in your WSL terminal it should give you your WSL ip address or your devices ip address.
