@@ -1,3 +1,11 @@
+DISCLAIMER: This is for tutorial purposes only. Please scrape ethically.
+
+File Description:
+app.py = Shows basic Selenium functionality.
+auto.py = Demos more advance Selenium functionality.
+indeed.py = A real world example that shows Selenium and Beautifulsoup working together. Selenium for interaction BeautifulSoup for static HTML parsing.
+soup.py = Shows basic BeautifulSoup functionality. Prints out a list of mock job descriptions and relative links.
+
 To install Selenium please follow the guide below. The subsidary points are there to help when it comes to troubleshooting. 
 NOTE: Everybody's environemnt is different. This was programmed in a WSL environment using Google Chromes chromedriver(https://chromedriver.chromium.org/downloads).
 
