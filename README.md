@@ -6,10 +6,10 @@ This is for tutorial purposes only. I do not condone/encourage unethical web scr
 This project demos various webscrapping methods. Meant to help those interested in the topic easily follow along. 
 
 # File Descriptions
-**app**:  Shows basic Selenium functionality.
-**auto**:  Demos more advance Selenium functionality.
-**indeed**:  A real world example that shows Selenium and Beautifulsoup working together. Selenium for interaction BeautifulSoup for static HTML parsing.
-**soup**:  Shows basic BeautifulSoup functionality. Prints out a list of mock job descriptions and relative links.
+- **app**:  Shows basic Selenium functionality.
+- **auto**:  Demos more advance Selenium functionality.
+- **indeed**:  A real world example that shows Selenium and Beautifulsoup working together. Selenium for interaction BeautifulSoup for static HTML parsing.
+- **soup**:  Shows basic BeautifulSoup functionality. Prints out a list of mock job descriptions and relative links.
 
 # Setup:
 Everybody's environemnt is different. This was programmed in a **WSL environment** using **Google Chromes** [chromedriver](https://chromedriver.chromium.org/downloads). You will need a web browser's driver!
